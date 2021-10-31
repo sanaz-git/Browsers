@@ -17,6 +17,7 @@ function hijackGoogleLogo() {
     const googleLogo = document.getElementById('hplogo');
     googleLogo.src = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
     googleLogo.srcset = 'https://www.hackyourfuture.dk/static/logo-dark.svg';
+    //srcset Defines multiple sizes of the same image, allowing the browser to select the appropriate image source.
   }
   
   hijackGoogleLogo();
