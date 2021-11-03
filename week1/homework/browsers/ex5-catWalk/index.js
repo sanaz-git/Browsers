@@ -20,9 +20,6 @@ function main(){
             pos += 10;
         }
      }
-   
-    
-
 }
 
 main() ;
