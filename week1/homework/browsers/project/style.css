@@ -29,10 +29,12 @@
 
   h3{ 
       text-align: right;
+      font-size: 16px;
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 20px;
       padding-right: 40px;
+      margin-bottom: 40px;
   }
 
   .icon{
@@ -49,9 +51,11 @@
     cursor: pointer;
   }
   
-  /* Darker background on mouse-over */
   .btn:hover {
-    background-color: RoyalBlue;
+    background-color: #ff5100;
   }
 
- 
+ #button{
+     float: right;
+     margin-right: 40px;
+ }
