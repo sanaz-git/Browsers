@@ -1,23 +1,23 @@
 const quotes = [
     {
       quote: "Change the world by being yourself.",
-      author:"Amy Poehler"
+      author:"_Amy Poehler"
     },
     {
       quote: "Whatever you do, do it well. ",
-      author:" Walt Disney"
+      author:"_Walt Disney"
     },
     {
       quote: "Everything you can imagine is real.",
-      author:"Pablo Picasso"
+      author:"_Pablo Picasso"
     },
     {
       quote: "Dream as if you’ll live forever, live as if you’ll die today.",
-      author:"James Dean"
+      author:"_James Dean"
     },
     {
       quote: "You do not find the happy life. You make it.",
-      author:"Camilla Eyring Kimball"
+      author:"_Camilla Eyring Kimball"
     }
 ];
     
