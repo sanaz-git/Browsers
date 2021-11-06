@@ -1,4 +1,4 @@
-const qoutes = [
+const quotes = [
     {
       quote: "Change the world by being yourself.",
       author:"Amy Poehler"
@@ -28,7 +28,8 @@ const p = document.querySelector('p');
 const h3 = document.querySelector('h3');
 
 button.addEventListener('click', function(){
-    let randomQuotes = quotes[Math.floor(Math.random() * qoutes.length)] 
-    p.textContent = quotes[randomQuotes].quote;
-    h3.textContent = quotes[randomQuotes].author;
+
+    let randomQuotes = Math.floor(Math.random() * quotes.length) 
+    p.textContent = quotes[randomQuotes].quote;   
+    h3.textContent = quotes[randomQuotes].author;      
 });

@@ -23,8 +23,9 @@
       padding-bottom: 10px;
       text-align: center;
       text-align: justify;
-      font-size: 23px;
+      font-size: 22px;
       line-height: 1.6;
+      position: relative;
   }
 
   h3{ 
