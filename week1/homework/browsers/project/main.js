@@ -26,6 +26,7 @@ const quotes = [
 const icon = document.getElementById('button');
 const p = document.querySelector('p');
 const h3 = document.querySelector('h3');
+const quoteIcon = document.createElement('i');
 
 button.addEventListener('click', function(){
 
