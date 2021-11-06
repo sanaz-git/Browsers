@@ -29,46 +29,45 @@
   const headTitle = document.createElement('h1');
   headTitle.textContent = 'Book List'
   headTitle.style.fontSize = "50px";
-  headTitle.style.paddingLeft = "0";
+  headTitle.style.paddingLeft = "60px";
   document.body.appendChild(headTitle)
 
   const ulElement = document.createElement('ul');
   ulElement.style.display = 'flex';
   ulElement.style.flexWrap = "wrap";
- 
   document.body.appendChild(ulElement);
+ 
 
   for (let i=0; i < myBooks.length ; i++){
 
 
     const liElement = document.createElement('li');
     liElement.style.listStyle = "none";
-    // liElement.style.padding = "25px";
-    // liElement.style.margin = "25px";
-    liElement.style.width = "300px";
+    liElement.style.padding = "25px";
+    liElement.style.margin = "25px";
     liElement.style.borderRadius = "25px"
     ulElement.appendChild(liElement);
 
     const pElement = document.createElement('p');
     pElement.textContent = `${myBooks[i].title} - ${myBooks[i].author}`;
-    liElement.style.width = "300px";
-    // pElement.style.margin ="5px";
-    ulElement.appendChild(pElement);
+    pElement.style.textAlign ="center";
+    pElement.style.fontSize ="20px";
+    
+    liElement.appendChild(pElement);
 
     const imgElement = document.createElement("img");
     imgElement.src = myBooks[i].imgSrc;
-    imgElement.setAttribute('alt', myBooks[i].title);
-    imgElement.style.display = 'block';
-    // imgElement.style.height = '400px';
-    imgElement.style.marginLeft = 'auto';
-    imgElement.style.marginRight = 'auto';
-    imgElement.style.marginBottom = '20px';
-    imgElement.style.width = '70%';
+    imgElement.style.width = "400px";
+    imgElement.style.height = "400px";
     liElement.appendChild(imgElement);
 
+ 
 
-   
-    
+    if (myBooks[i].alreadyRead === true) {
+      liElement.style.backgroundColor = 'green';
+    } else {
+      liElement.style.backgroundColor = 'red';
+    }  
 
   }
 }
