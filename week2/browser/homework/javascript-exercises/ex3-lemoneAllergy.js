@@ -14,4 +14,3 @@ const fruitBasket = [
   }
   
   console.log(sanitizeFruitBasket("lemon"));
-  
