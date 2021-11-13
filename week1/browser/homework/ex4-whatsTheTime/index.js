@@ -1,0 +1,47 @@
+//first method
+function main() {
+  
+    function clock() {
+      const currentTime = new Date();
+      document.body.textContent = currentTime.toLocaleTimeString();
+      
+      console.log(currentTime);
+    }
+  
+    window.setInterval(clock, 1000);
+  
+  }
+  
+  main()
+
+
+// second method
+// function showTime(){
+//     var date = new Date();
+//     var h = date.getHours(); 
+//     var m = date.getMinutes(); 
+//     var s = date.getSeconds(); 
+//     var session = "AM";
+    
+//     if(h == 0){
+//         h = 12;
+//     }
+    
+//     if(h > 12){
+//         h = h - 12;
+//         session = "PM";
+//     }
+    
+//     h = (h < 10) ? "0" + h : h;
+//     m = (m < 10) ? "0" + m : m;
+//     s = (s < 10) ? "0" + s : s;
+    
+//     var time = h + ":" + m + ":" + s + " " + session;
+//     document.getElementById("DigitalCLOCK").innerText = time;
+//     document.getElementById("DigitalCLOCK").textContent = time;
+    
+//     setTimeout(showTime, 1000);
+    
+// }
+ 
+// showTime();
