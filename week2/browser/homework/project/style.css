@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  body {
+    font-family: Bradley Hand, cursive;;
+    line-height: 1.6;
+    background: #1E555C;
+    color: white;
+    text-align: center;
+  }
+
+  h1{
+      font-size:42px;
+      padding-top: 50px;
+  }
+
+  h2{
+      font-size: 32px;
+      padding-top: 25px;
+  }
+
+  h3{
+    font-size: 32px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.session{
+    border:2px solid white;
+    border-radius: 40px;
+    margin: 40px auto;
+    max-width: 600px;
+  }
+
+ .icon .material-icons{
+     padding: 0px 20px;
+     
+ } 
+ 
