@@ -7,6 +7,8 @@
     <title>Pomodoro Clock</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+</head>
 </head>
 <body>
     <div>
@@ -14,19 +16,25 @@
             <h1>Pomodoro Clock</h1>
             <h2>Session Length</h2>
         </div>
-        <div class="length">
-            
-            <h2><span>&#8681;</span> 25 <span>&#8679;</span></h2>
+        <div class="length">          
+           <span id = "down">&#8681;</span>
+           <span id = "duration">25</span>
+           <span id = "up">&#8679;</span> 
+           
         </div>
+
         <div class="session">
             <h2>Session</h2>
-            <h3>25:00</h3>
+            <h3 id="time">25:00</h3>
         </div>
+
         <div class="icon">
-            <i class="material-icons">play_arrow</i>
+            <i id="play" > play </button>
             <i class="material-icons">pause</i>
+            <i class="fa fa-stop" style="font-size:18px"></i>
 
         </div>
+        
     </div>
 
     <script src="main.js"></script>

@@ -28,6 +28,10 @@
     padding-bottom: 20px;
 }
 
+.length{
+    font-size: 32px;
+}
+
 .session{
     border:2px solid white;
     border-radius: 40px;
@@ -36,7 +40,9 @@
   }
 
  .icon .material-icons{
-     padding: 0px 20px;
-     
+     padding: 0px 20px;    
  } 
  
+ .icon .fa-stop{
+    padding: 0px 20px;
+ }
