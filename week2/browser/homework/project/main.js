@@ -1,97 +1,86 @@
+function main() {
+  const setTime = document.getElementById("duration");
+  const upTime = document.getElementById("up");
+  const downTime = document.getElementById("down");
+  const playTime = document.getElementById("play");
+  const pauseTime = document.getElementById("pause");
+  const stopTime = document.getElementById("stop");
+  const time = document.getElementById("time");
 
-const up = document.getElementById("up");
-const durationEl = document.getElementById("duration");
-const down = document.getElementById("down");
-let duration = 25;
+  let minutes = parseInt(setTime.textContent);
+  let seconds = 0;
 
-up.addEventListener("click",function(){
-    if(duration == 59){
-        duration = 0;
+  // UP key
+  function up() {
+    if (minutes == 59) {
+      minutes = 1;
+    } else {
+      minutes++;
+      setTime.textContent = minutes;
     }
-    duration++;
-    durationEl.textContent = duration;
-   
-} );
+  }
 
-down.addEventListener("click",() => {
-    if(duration < 2){
-        duration = 60 ;
+  // Down key
+  function down() {
+    if (minutes == 1) {
+      minutes = 59;
+    } else {
+      minutes--;
+      setTime.textContent = minutes;
     }
-    duration--;
-    durationEl.textContent = duration;
-    
-})
+  }
 
+  // Stop key
+  function stop() {
+    minutes = 25;
+    seconds = 0;
+    setTime.textContent = minutes;
+    time.textContent = `${minutes}:00`;
+    upTime.addEventListener("click", up);
+    downTime.addEventListener("click", down);
+    playTime.addEventListener("click", play);
+  }
 
+  // Play key
+  function play() {
+    upTime.removeEventListener("click", up);
+    downTime.removeEventListener("click", down);
+    playTime.removeEventListener("click", play);
+    stopTime.removeEventListener("click", stop);
+    pauseTime.addEventListener("click", pause);
 
+    function timer() {
+      if (seconds !== 0) {
+        seconds--;
+        time.textContent = `${minutes}:${seconds}`;
+      } else if (minutes !== 0 && seconds == 0) {
+        seconds = 59;
+        minutes--;
+      } else {
+        time.textContent = `Time's Up !`;
 
+        clearInterval(timing);
+        stopTime.addEventListener("click", stop);
+      }
+    }
 
+    timer();
 
+    const timing = setInterval(timer, 1000);
 
+    // Pause key
+    function pause() {
+      clearInterval(timing);
+      pauseTime.removeEventListener("click", pause);
+      playTime.addEventListener("click", play);
+      stopTime.addEventListener("click", stop);
+    }
+  }
 
+  upTime.addEventListener("click", up);
+  downTime.addEventListener("click", down);
+  playTime.addEventListener("click", play);
+  stopTime.addEventListener("click", stop);
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-// startTimer********************
-// let timer = document.getElementById("time");
-// let startTimer = function(){
-//     let currentTime = parseFloat(timer.textContent)
-//     if (currentTime > 0){
-//         timer.textContent = currentTime -1;
-//     }else{
-//      window.clearInterval(time);
-//      timer.textContent = "Time's up!";
-//     }    
-// }
-// let time = window.setInterval(startTimer, 1000)
-
-// let clickIcon = getElementById("play");
-// clickIcon.addEventListener("click",startTimer );
-
-
-// // clickIcon.addEventListener('click', () => {setInterval(startTimer ,1000);},{once: true});
-
-// // document.querySelector('#button').addEventListener('click',startTimer)
-
-// // pauseTimer**************************************
-// let pauseTimer = function(){
-//     let currentTime = parseFloat(timer.textContent)
-//     // if (currentTime > 0){
-//     //     timer.textContent = currentTime -1;
-//     // }else{
-//     //  window.clearInterval(time);
-//     //  timer.textContent = "Tim's up!";
-//     // }    
-// }
-// let time = window.setInterval(pauseTimer, 1000)
-
-// let clickIcon = getElementById("pause");
-// clickIcon.addEventListener("click",pauseTimer );
-
-// // stopTimer*****************************************
-// let stopTimer = function(){
-//     let currentTime = parseFloat(timer.textContent)
-//     // if (currentTime > 0){
-//     //     timer.textContent = currentTime -1;
-//     // }else{
-//     //  window.clearInterval(time);
-//     //  timer.textContent = "Tim's up!";
-//     // }    
-// }
-// let time = window.setTimeOut(stopTimer, 1000)
-
-// const clickIcon = getElementById("stop");
-// clickIcon.addEventListener("click",stopTimer );
-
-
+main();
