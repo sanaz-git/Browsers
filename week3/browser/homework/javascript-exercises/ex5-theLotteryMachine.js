@@ -17,38 +17,55 @@
 // Both functions should be called if the array value is divisible by both 3 and 5.
 
 function threeFive(startIndex, stopIndex, threeCallback, fiveCallback) {
-    const numbers = [];
-    // make array
-    if (startIndex > stopIndex) {
-			let arr = new Array(startIndex - stopIndex + 1);
-			for (let i = 0; i < arr.length; i++, startIndex--) {
-				arr[i] = startIndex;
-			}
-			return arr;
-		} 
-       else 
-       {
-			let arro = new Array(stopIndex-startIndex+1);
-         
-		for (let j = 0; j < arro.length; j++, startIndex++) 
-        {
-			arro[j] = startIndex;
-		}
-      		return arro;
-		}
-	
-    
-    // start at beginning of array and check if you should call threeCallback or fiveCallback or go on to next
-  }
-  
-  console.log(threeFive(10, 15));
-  
-  // Should create an array [10,11,12,13,14,15]
-  // and call sayFive, sayThree, sayThree, sayFive
+  const numbers = [];
 
-  function threeCallback(){
-    console.log("value is divisible by 3")
+  // make array
+  if (startIndex > stopIndex) {
+    console.log("Change the values: The stop number should be greater than start number");
+  } else {
+    let pointer = startIndex;
+    for (let i = 0; i < stopIndex - startIndex + 1; i++) {
+      numbers.push(pointer);
+      pointer++;
+    }
   }
-  function fiveCallback(){
-    console.log("value is divisible by 5")
+// start at beginning of array and check if you should call threeCallback or fiveCallback or go on to next
+
+numbers.forEach(function (num) {
+  if (num % 3 == 0 && num % 5 == 0) {
+    threeCallback(num);
+    fiveCallback(num);
+  } else if (num % 5 == 0) {
+    fiveCallback(num);
+  } else if (num % 3 == 0) {
+    threeCallback(num);
+  } else {
+    console.log("number " + num + " is not divisible by 3 or 5");
   }
+}); 
+}
+
+function sayThree(num) {
+  console.log(`${num} value is divisible by 3`);
+}
+function sayFive(num) {
+  console.log(`${num} value is divisible by 5`);
+}
+
+console.log(threeFive(10, 15, sayThree, sayFive));
+
+// make array
+// if (startIndex > stopIndex) {
+//   let arr = (startIndex - stopIndex + 1);
+//   for (let i = 0; i < arr.length; i++, startIndex--) {
+//     arr[i] = startIndex;
+//   }
+//   return arr;
+// } else {
+//   let arro = new Array(stopIndex - startIndex + 1);
+
+//   for (let j = 0; j < arro.length; j++, startIndex++) {
+//     arro[j] = startIndex;
+//   }
+//   return arro;
+// }
