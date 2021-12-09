@@ -15,32 +15,38 @@
         <hr>
         <div id="input1">
             <p>How much was your bill?</p>
-            <input type="number" value="" id="Bill Amount" style="width: 250px; height:30px;">
+            <input type="number" value="" id="billAmount" style="width: 250px; height:30px;">
         </div>
         <div id="form">
             <p>How was your service?</p>
             <form id="myForm" > 
                 <select id="mySelect" style="width: 250px;height:30px;"  >
-                <option>-- Choose an Option --</option>
-                <option>30%-Outstanding</option>
-                <option>20%-Good</option>
-                <option>15%-It was Ok</option>
-                <option>10%-Bad</option>
-                <option>5%-Terrible</option>
+                    <option disabled selected>-- Choose an Option --</option>
+                    <option value = "30" >30%-Outstanding</option>
+                    <option value = "20 ">20%-Good</option>
+                    <option value = "15">15%-It was Ok</option>
+                    <option value = "10">10%-Bad</option>
+                    <option value = "5">5%-Terrible</option>
               </select>
             </form>
         </div>
         <div id="input2">
             <p>How many people are sharing the bill?</p>
-            <input type="number" value="" id="Number of People" style="width: 250px;height:30px;">
+            <input type="number" value="" id="People" style="width: 250px;height:30px;">
         </div>
         <div>
             <button id="btn1" name="subject" type="submit" value="HTML" >CALCULATE</button>
         </div>
+        <div id="result">
+            <h1>TIP AMOUNT</h1>
+            <h1 >$ <span id="price"></span></h1>
+            <h1 id = "each"></h1>
+    
+        </div>
     </div>
 
 
-    <script src="index.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
