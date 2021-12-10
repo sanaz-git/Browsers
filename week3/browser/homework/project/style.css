@@ -53,6 +53,10 @@ span::before {
   transform: translateY(-50%);
 }
 
+#price {
+    padding-left: 20px;
+}
+
 p {
   padding-bottom: 10px;
   text-align: left;

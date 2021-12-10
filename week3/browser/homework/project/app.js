@@ -17,7 +17,7 @@ function calculate (){
   if (isNaN(priceNum)) {
     price.textContent = "";
   } else {
-    price.textContent = priceNum;
+    price.textContent = priceNum ;
   }
 
   if (peopleNum == 1) {
