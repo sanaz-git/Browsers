@@ -5,9 +5,9 @@ const select = document.getElementById("btn1");
 const price = document.getElementById("price");
 const each = document.getElementById("each");
 
-select.addEventListener("click", calculate)
+select.addEventListener("click", calculate);
 
-function calculate (){
+function calculate() {
   const amountNum = parseInt(amount.value);
   const serviceNum = parseInt(service.value);
   const peopleNum = parseInt(people.value);
@@ -17,7 +17,7 @@ function calculate (){
   if (isNaN(priceNum)) {
     price.textContent = "";
   } else {
-    price.textContent = priceNum ;
+    price.textContent = priceNum;
   }
 
   if (peopleNum == 1) {
@@ -27,8 +27,12 @@ function calculate (){
     each.style.color = "blue";
   }
 
-  if (amount.value == "" || people.value == "" || service.value == "-- Choose an Option --") {
+  if (
+    amount.value == "" ||
+    people.value == "" ||
+    service.value == "-- Choose an Option --"
+  ) {
     each.textContent = "You need to fill in all the fields!";
     each.style.color = "red";
   }
-};
+}

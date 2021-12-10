@@ -52,7 +52,7 @@ function sayFive(num) {
   console.log(`${num} value is divisible by 5`);
 }
 
-console.log(threeFive(10, 15, sayThree, sayFive));
+threeFive(10, 15, sayThree, sayFive)
 
 // make array
 // if (startIndex > stopIndex) {
