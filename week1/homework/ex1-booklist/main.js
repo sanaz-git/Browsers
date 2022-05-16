@@ -48,7 +48,6 @@ function bookList() {
     pElement.textContent = `${myBooks[i].title} - ${myBooks[i].author}`;
     pElement.style.textAlign = 'center';
     pElement.style.fontSize = '15px';
-
     liElement.appendChild(pElement);
 
     const imgElement = document.createElement('img');
