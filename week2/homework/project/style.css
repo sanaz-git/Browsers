@@ -48,3 +48,18 @@ h3 {
 .icon .fa-stop {
   padding: 0px 20px;
 }
+#down {
+  cursor: pointer;
+}
+#up {
+  cursor: pointer;
+}
+#play {
+  cursor: pointer;
+}
+#pause {
+  cursor: pointer;
+}
+#stop {
+  cursor: pointer;
+}
