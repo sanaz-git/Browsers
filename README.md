@@ -1,1 +1,1 @@
-# JavaScript2
+# Browsers
